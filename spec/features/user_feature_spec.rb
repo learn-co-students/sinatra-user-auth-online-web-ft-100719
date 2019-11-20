@@ -16,7 +16,7 @@ describe "User sign up, log in, sign out" do
       fill_in("name", :with => valid_user.name)
       fill_in("email", :with => valid_user.email)
       fill_in("password", :with => valid_user.password)
-      click_button('Sign Up')
+      click_button('submit')
       expect(current_path).to eq('/users/home')
       expect(page).to have_content("Welcome, #{valid_user.name}!")
     end
